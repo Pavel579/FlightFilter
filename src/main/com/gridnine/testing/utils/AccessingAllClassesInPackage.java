@@ -1,4 +1,4 @@
-package com.gridnine.testing.utils;
+package main.com.gridnine.testing.utils;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
