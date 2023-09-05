@@ -18,5 +18,6 @@ public class Main {
         ffm.showFilteredData("DEPARTURE_DATE_TILL_NOW_FILTER", flights);
         ffm.showFilteredData("SEGMENTS_WITH_ARRIVAL_DATE_LESS_THAN_DEPARTURE_FILTER", flights);
         ffm.showFilteredData("TIME_ON_GROUND_IS_MORE_THAN_TWO_HOURS", flights);
+        ffm.showFilteredData("123", flights);
     }
 }

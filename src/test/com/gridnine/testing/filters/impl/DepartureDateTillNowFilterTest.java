@@ -7,6 +7,7 @@ import main.com.gridnine.testing.models.Flight;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class DepartureDateTillNowFilterTest {
     Filter filter;
     List<Flight> flights = FlightBuilder.createFlights();
+    LocalDateTime threeDaysFromNow = LocalDateTime.now().plusDays(3);
 
     @BeforeEach
     void beforeEach() {
@@ -24,7 +26,7 @@ public class DepartureDateTillNowFilterTest {
     void checkExecute() {
         List<Flight> flightsAfterFilter = filter.execute(flights);
         assertEquals(flightsAfterFilter.size(), 1);
-        assertEquals(flightsAfterFilter.get(0).getSegments().get(0).getDepartureDate().getHour(), 15);
+        assertEquals(flightsAfterFilter.get(0).getSegments().get(0).getDepartureDate().getHour(), threeDaysFromNow.getHour());
     }
 
 
