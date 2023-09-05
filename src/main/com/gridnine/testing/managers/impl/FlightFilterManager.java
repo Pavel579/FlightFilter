@@ -20,13 +20,14 @@ public class FlightFilterManager implements FilterManager {
                     filters.put(filter.getCode(), filter);
                 }
             }
-        }catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
+        } catch (NoSuchMethodException | InvocationTargetException | InstantiationException |
+                 IllegalAccessException e) {
             System.out.println("Fault during creating filter object");
         }
     }
 
     public void showAllFilters() {
-        for (Map.Entry<String, Filter> entry : filters.entrySet() ) {
+        for (Map.Entry<String, Filter> entry : filters.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue().getClass().getSimpleName());
         }
     }

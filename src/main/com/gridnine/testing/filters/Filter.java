@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface Filter {
     List<Flight> execute(List<Flight> flights);
+
     String getCode();
 }
